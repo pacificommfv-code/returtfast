@@ -68,7 +68,12 @@
 <h3>Ganancia en tiempo real: $<span id="gananciaTiempoReal">0</span></h3>
 
 <input type="number" id="monto" placeholder="Monto a invertir">
+<h3>Recargar saldo</h3>
 
+<button onclick="recargarMonto(10)">$10</button>
+<button onclick="recargarMonto(50)">$50</button>
+<button onclick="recargarMonto(100)">$100</button>
+<button onclick="recargarMonto(500)">$500</button>
 <br>
 
 <button onclick="invertir()">Invertir</button>
@@ -253,4 +258,5 @@ document.getElementById("panel").style.display="none";
 </script>
 
 </body>
+
 </html>
