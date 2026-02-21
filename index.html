@@ -91,7 +91,24 @@
 </div>
 
 <script>
+function recargarMonto(monto){
 
+let datos = JSON.parse(localStorage.getItem(usuarioActual));
+
+datos.saldo += monto;
+
+datos.historial.push(
+"Recarga rápida $" + monto + " - " + new Date().toLocaleString()
+);
+
+localStorage.setItem(usuarioActual, JSON.stringify(datos));
+
+actualizarSaldo();
+mostrarHistorial();
+
+alert("Recargaste $" + monto);
+
+}
 let usuarioActual = null;
 let intervaloGanancia = null;
 
@@ -260,3 +277,4 @@ document.getElementById("panel").style.display="none";
 </body>
 
 </html>
+
